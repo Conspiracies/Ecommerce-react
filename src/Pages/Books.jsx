@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Book from "../components/UI/Book.jsx";
 
 const Books = ({ books: initialBooks }) => {
-  const { books, setBooks } = useState(initialBooks);
+  const [ books, setBooks ] = useState(initialBooks);
 
   function filterBooks(filter) {
     console.log(filter);
@@ -17,7 +17,7 @@ const Books = ({ books: initialBooks }) => {
           )
       );
     }
-    if (filter === `HIGH_TI_LOW`) {
+    if (filter === `HIGH_TO_LOW`) {
       setBooks(
         books
           .slice()
